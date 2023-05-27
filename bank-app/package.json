@@ -4,8 +4,11 @@
   "description": "backend directory for the application",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix frontend",
+    "start": "node server.js",
     "server": "nodemon server.js",
-    "start": "node server.js"
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -32,4 +35,5 @@
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
+  
 }
