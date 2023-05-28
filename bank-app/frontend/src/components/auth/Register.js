@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Register extends Component {
   constructor() {
     super();
@@ -11,28 +12,36 @@ class Register extends Component {
       errors: {}
     };
   }
-onChange = e => {
+
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
-onSubmit = e => {
+
+  onSubmit = e => {
     e.preventDefault();
-const newUser = {
+    const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     };
-console.log(newUser);
+    console.log(newUser);
   };
-render() {
+
+  render() {
     const { errors } = this.state;
-return (
+
+    const nameClass = this.state.name ? "active" : "";
+    const emailClass = this.state.email ? "active" : "";
+    const passwordClass = this.state.password ? "active" : "";
+    const password2Class = this.state.password2 ? "active" : "";
+
+    return (
       <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
+              <i className="material-icons left">keyboard_backspace</i> Back to home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
@@ -46,22 +55,28 @@ return (
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
-                  value={this.state.name}
+                  value={this.state.name || ""}
                   error={errors.name}
                   id="name"
                   type="text"
+                  className={nameClass}
                 />
-                <label htmlFor="name">Name</label>
+                <label className={nameClass} htmlFor="name">
+                  Name
+                </label>
               </div>
               <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
-                  value={this.state.email}
+                  value={this.state.email || ""}
                   error={errors.email}
                   id="email"
                   type="email"
+                  className={emailClass}
                 />
-                <label htmlFor="email">Email</label>
+                <label className={emailClass} htmlFor="email">
+                  Email
+                </label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -70,8 +85,11 @@ return (
                   error={errors.password}
                   id="password"
                   type="password"
+                  className={passwordClass}
                 />
-                <label htmlFor="password">Password</label>
+                <label className={passwordClass} htmlFor="password">
+                  Password
+                </label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -80,8 +98,11 @@ return (
                   error={errors.password2}
                   id="password2"
                   type="password"
+                  className={password2Class}
                 />
-                <label htmlFor="password2">Confirm Password</label>
+                <label className={password2Class} htmlFor="password2">
+                  Confirm Password
+                </label>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
@@ -104,4 +125,5 @@ return (
     );
   }
 }
+
 export default Register;

@@ -22,6 +22,10 @@ console.log(userData);
   };
 render() {
     const { errors } = this.state;
+
+    const emailClass = this.state.email ? "active" : "";
+    const passwordClass = this.state.password ? "active" : "";
+
 return (
       <div className="container">
         <div style={{ marginTop: "4rem" }} className="row">
@@ -46,8 +50,9 @@ return (
                   error={errors.email}
                   id="email"
                   type="email"
+                  className={emailClass}
                 />
-                <label htmlFor="email">Email</label>
+                <label className={emailClass} htmlFor="email">Email</label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -56,8 +61,11 @@ return (
                   error={errors.password}
                   id="password"
                   type="password"
+                  className={passwordClass}
                 />
-                <label htmlFor="password">Password</label>
+                <label className={passwordClass} htmlFor="password">
+                  Password
+                </label>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
