@@ -54,7 +54,7 @@ return (
                 />
                 <label className={emailClass} htmlFor="email">Email</label>
               </div>
-              <div className="input-field col s12">
+              <div className="w">
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
