@@ -1,20 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-import { combineReducers } from "redux";
-import authReducer from "./reducers/authReducers";
-import errorReducer from "./reducers/errorReducers";
-export default combineReducers({
-  auth: authReducer,
-  errors: errorReducer
-});
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+serviceWorker.unregister();
