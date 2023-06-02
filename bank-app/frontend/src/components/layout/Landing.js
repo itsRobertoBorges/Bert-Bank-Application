@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Landing extends Component {
   render() {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
+            <img
+              src="./corp-art2.jpg"
+              alt="corp art"
+              style={{ maxWidth: "700px", maxHeight: "700px" }}
+            />
             <h4>
-              <b>Welcome!</b> This a simple Banking Application built using{" "}
+              <b>Welcome!</b> This is a simple Banking Application built using{" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
               scratch
             </h4>
@@ -22,7 +28,7 @@ class Landing extends Component {
                 style={{
                   width: "140px",
                   borderRadius: "3px",
-                  letterSpacing: "1.5px"
+                  letterSpacing: "1.5px",
                 }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
               >
@@ -35,7 +41,7 @@ class Landing extends Component {
                 style={{
                   width: "140px",
                   borderRadius: "3px",
-                  letterSpacing: "1.5px"
+                  letterSpacing: "1.5px",
                 }}
                 className="btn btn-large btn-flat waves-effect white black-text"
               >
@@ -48,4 +54,5 @@ class Landing extends Component {
     );
   }
 }
+
 export default Landing;
