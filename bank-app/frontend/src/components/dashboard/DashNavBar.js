@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { Link } from "react-router-dom"; // Import the Link component from React Router
 
 class DashNavBar extends Component {
   onLogoutClick = e => {
@@ -19,16 +20,16 @@ class DashNavBar extends Component {
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <nav className="dash-nav">
-              <b>Hey there,</b> <strong>{user.name.split(" ")[0]}</strong>
-              <span className="dash-nav-link">
-                <h1><strong>Deposit</strong></h1>
-              </span>
-              <span className="dash-nav-link">
-                <h1><strong>Withdrawl</strong></h1>
-              </span>
-              <span className="dash-nav-link">
-                <h1><strong>View Account</strong></h1>
-              </span>
+              <b>Hey there, </b> <strong>{user.name.split(" ")[0]}</strong>
+              <Link to="/deposit" className="dash-nav-link">
+                <h1 style={{ color: "black" }}><strong>Deposit</strong></h1>
+              </Link>
+              <Link to="/withdrawl" className="dash-nav-link">
+                <h1 style={{ color: "black" }}><strong>Withdrawal</strong></h1>
+              </Link>
+              <Link to="/viewaccount" className="dash-nav-link">
+                <h1 style={{ color: "black" }}><strong>View Account</strong></h1>
+              </Link>
             </nav>
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
@@ -70,5 +71,3 @@ export default connect(
   mapStateToProps,
   { logoutUser }
 )(DashNavBar);
-
-            

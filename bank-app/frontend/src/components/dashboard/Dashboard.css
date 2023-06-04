@@ -6,10 +6,26 @@
 }
 
 .dash-nav-link {
-    margin-left: 50px; /* Adjust the margin value as per your preference */
+    margin-left: 50px; 
 }
 
 .dash-nav-link h1 {
-    font-size: 14px; /* Adjust the font size as per your preference */
+    font-size: 14px; 
     margin-right: 25px;
+}
+
+.deposit-form-container form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .deposit-form-container .form-group {
+    width: 100%;
+    max-width: 300px;
+  }
+.deposit-title {
+    margin-top: 100px;
+    text-align: center;
 }
