@@ -37,7 +37,18 @@ class Deposit extends Component {
 
     return (
       <div className="deposit-container">
-        <h2 className="deposit-title">Deposit</h2>
+        <div className="title-container">
+          <Link
+            to="/dashboard"
+            style={{
+              fontFamily: "monospace",
+            }}
+            className="col s5 brand-logo center black-text"
+          >
+            <i className="material-icons">arrow_back</i>
+          </Link>
+          <h2 className="deposit-title">Deposit</h2>
+        </div>
         <div className="deposit-form-container">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">

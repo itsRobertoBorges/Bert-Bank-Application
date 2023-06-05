@@ -20,7 +20,6 @@ class DashNavBar extends Component {
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <nav className="dash-nav">
-              <b>Hey there, </b> <strong>{user.name.split(" ")[0]}</strong>
               <Link to="/deposit" className="dash-nav-link">
                 <h1 style={{ color: "black" }}><strong>Deposit</strong></h1>
               </Link>

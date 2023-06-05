@@ -21,11 +21,31 @@
     align-items: center;
   }
   
-  .deposit-form-container .form-group {
+.deposit-form-container .form-group {
     width: 100%;
     max-width: 300px;
-  }
+}
+
 .deposit-title {
     margin-top: 100px;
     text-align: center;
 }
+
+.material-icons {
+    font-size: 20px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+  
+
+.deposit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* Adjust the height as needed */
+  }

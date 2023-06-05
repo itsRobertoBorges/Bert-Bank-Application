@@ -15,7 +15,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Deposit from "./pages/Deposit";
-import Withdrawal from "./pages/Withdrawl";
+import Withdrawl from "./pages/Withdrawl";
 import ViewAccount from "./pages/ViewAccount"
 
 import "./App.css";
@@ -51,7 +51,7 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/deposit" component={Deposit} />
-              <Route exact path="/withdrawal" component={Withdrawal} />
+              <Route exact path="/withdrawl" component={Withdrawl} />
               <Route exact path="/viewaccount" component={ViewAccount} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
