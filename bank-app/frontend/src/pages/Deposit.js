@@ -37,8 +37,8 @@ class Deposit extends Component {
 
     return (
       <div className="deposit-container">
-        <div className="title-container">
-          <Link
+        <h2 className="deposit-title">Deposit</h2>
+        <Link
             to="/dashboard"
             style={{
               fontFamily: "monospace",
@@ -47,8 +47,6 @@ class Deposit extends Component {
           >
             <i className="material-icons">arrow_back</i>
           </Link>
-          <h2 className="deposit-title">Deposit</h2>
-        </div>
         <div className="deposit-form-container">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
@@ -64,7 +62,7 @@ class Deposit extends Component {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Submit
+              Deposit
             </button>
           </form>
         </div>
