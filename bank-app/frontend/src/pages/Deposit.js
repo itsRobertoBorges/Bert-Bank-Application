@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/authActions";
-import { Link } from "react-router-dom"; // Import the Link component from React Router
+import { Link } from "react-router-dom"; 
 
 class Deposit extends Component {
   constructor(props) {

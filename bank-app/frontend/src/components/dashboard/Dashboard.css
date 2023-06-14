@@ -1,51 +1,190 @@
 .dash-nav {
-    background-color: rgb(255, 255, 255);
-    color: black;
     display: flex;
-    justify-content: flex-end;
-}
-
-.dash-nav-link {
-    margin-left: 50px; 
-}
-
-.dash-nav-link h1 {
-    font-size: 14px; 
-    margin-right: 25px;
-}
-
-.deposit-form-container form {
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  .dash-nav-link {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .dash-nav-link h1 {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+  
+  .deposit-form-container form {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-.deposit-form-container .form-group {
+  .deposit-form-container .form-group {
     width: 100%;
     max-width: 300px;
-}
-
-.deposit-title {
+  }
+  
+  .deposit-title {
     margin-top: 100px;
     text-align: center;
-}
-
-.material-icons {
+  }
+  
+  .material-icons {
     font-size: 20px;
-}
-
-.title-container {
+  }
+  
+  .title-container {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
-}
+  }
   
-
-.deposit-container {
+  .deposit-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh; /* Adjust the height as needed */
+    height: 50vh; 
   }
+  
+  .welcome-text {
+    margin-top: 30px;
+  }
+  
+  .date-text {
+    margin-top: 10px;
+  }
+  
+  .btn-logout {
+    display: block;
+    width: 150px;
+    margin-top: 1rem;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    background-color: #2196f3;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-logout:hover {
+    background-color: #1976d2;
+  }
+  
+
+  /* View Account CSS */
+
+  .view-account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .view-account-title {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .view-account-details {
+    margin-top: 30px;
+  }
+  
+  .view-account-details h3 {
+    margin-bottom: 10px;
+  }
+  
+  .view-account-details p {
+    margin-bottom: 5px;
+  }
+  
+  .view-account-details .label {
+    font-weight: bold;
+  }
+  
+  .view-account-details .value {
+    margin-left: 10px;
+  }
+  
+  .dash-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  .dash-nav-link {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .dash-nav-link h1 {
+    font-size: 14px;
+    margin-right: 15px;
+  }
+  
+  .deposit-form-container form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .deposit-form-container .form-group {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .material-icons {
+    font-size: 20px;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  
+  .welcome-text {
+    margin-top: 30px;
+  }
+  
+  .date-text {
+    margin-top: 10px;
+  }
+
+  .total-saved-label {
+    text-align: center;
+  }
+  
+  .btn-logout {
+    display: block;
+    width: 150px;
+    margin-top: 1rem;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    background-color: #2196f3;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-logout:hover {
+    background-color: #1976d2;
+  }
+
+
+  
