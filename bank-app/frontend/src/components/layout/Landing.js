@@ -5,21 +5,19 @@ class Landing extends Component {
   render() {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
+        <div className="background-image"></div>
         <div className="row">
           <div className="col s12 center-align">
             <img
-              src="./corp-art2.jpg"
+              src="./corp-logo.png"
               alt="corp art"
-              style={{ maxWidth: "700px", maxHeight: "700px" }}
+              style={{ maxWidth: "300px", maxHeight: "500px" }}
             />
-            <h4>
-              <b>Welcome!</b> This is a simple Banking Application built using{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-              scratch
+            <h4 style={{ fontFamily: "Share Tech Mono, monospace" }}>
+              <b>Welcome!</b> This is a simple Banking Application built using the MERN stack from scratch
             </h4>
-            <p className="flow-text grey-text text-darken-1">
-              This is a (minimal) full-stack app with user authentication via
-              passport and JWTs
+            <p className="flow-text grey-text text-darken-1" style={{ fontFamily: "Share Tech Mono, monospace" }}>
+              This is a (minimal) full-stack app with user authentication via passport and JWTs
             </p>
             <br />
             <div className="col s6">
@@ -29,6 +27,7 @@ class Landing extends Component {
                   width: "140px",
                   borderRadius: "3px",
                   letterSpacing: "1.5px",
+                  fontFamily: "Share Tech Mono, monospace"
                 }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
               >
@@ -42,6 +41,7 @@ class Landing extends Component {
                   width: "140px",
                   borderRadius: "3px",
                   letterSpacing: "1.5px",
+                  fontFamily: "Share Tech Mono, monospace"
                 }}
                 className="btn btn-large btn-flat waves-effect white black-text"
               >

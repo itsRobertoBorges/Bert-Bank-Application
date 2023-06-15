@@ -7,7 +7,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-//Components
+// Components
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
@@ -16,7 +16,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Deposit from "./pages/Deposit";
 import Withdrawl from "./pages/Withdrawl";
-import ViewAccount from "./pages/ViewAccount"
+import ViewAccount from "./pages/ViewAccount";
 
 import "./App.css";
 
@@ -39,26 +39,30 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
+
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <Router>
-          <div className="App">
-            <Navbar />
-            <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/deposit" component={Deposit} />
-              <Route exact path="/withdrawl" component={Withdrawl} />
-              <Route exact path="/viewaccount" component={ViewAccount} />
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            </Switch>
-          </div>
-        </Router>
-      </Provider>
+      <div className="App">
+        <Provider store={store}>
+          <Router>
+            <div>
+              <Navbar />
+              <Switch>
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/deposit" component={Deposit} />
+                <Route exact path="/withdrawl" component={Withdrawl} />
+                <Route exact path="/viewaccount" component={ViewAccount} />
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+            </div>
+          </Router>
+        </Provider>
+      </div>
     );
   }
 }
+
 export default App;
