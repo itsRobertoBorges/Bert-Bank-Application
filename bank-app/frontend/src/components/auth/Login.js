@@ -63,11 +63,11 @@ class Login extends Component {
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
+              <h4 style={{ fontFamily: "Share Tech Mono, monospace" }}>
                 <b>Login</b> below
               </h4>
-              <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/register">Register</Link>
+              <p className="grey-text text-darken-1" style={{ fontFamily: "Share Tech Mono, monospace" }}>
+                Don't have an account? <Link to="/register" style={{ fontFamily: "Share Tech Mono, monospace" }}>Register</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -82,7 +82,7 @@ class Login extends Component {
                     invalid: errors.email || errors.emailnotfound
                   })}
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" style={{ fontFamily: "Share Tech Mono, monospace" }}>Email</label>
                 <span className="red-text">
                   {errors.email}
                   {errors.emailnotfound}
@@ -99,7 +99,7 @@ class Login extends Component {
                     invalid: errors.password || errors.passwordincorrect
                   })}
                 />
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" style={{ fontFamily: "Share Tech Mono, monospace" }}>Password</label>
                 <span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
@@ -107,12 +107,7 @@ class Login extends Component {
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
+                  style={{ fontFamily: "Share Tech Mono, monospace" }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >

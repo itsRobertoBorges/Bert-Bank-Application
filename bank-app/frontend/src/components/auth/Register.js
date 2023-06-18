@@ -90,15 +90,15 @@ class Register extends Component {
               <i className="material-icons left">keyboard_backspace</i> Back to home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
+              <h4 style={{ fontFamily: "Share Tech Mono, monospace" }}>
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1">
+              <p className="grey-text text-darken-1" style={{ fontFamily: "Share Tech Mono, monospace" }}>
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
+              <div className="input-field col s12" style={{ fontFamily: "Share Tech Mono, monospace" }}>
                 <input
                   ref={this.nameInput}
                   onChange={this.onChange}
@@ -126,7 +126,7 @@ class Register extends Component {
                     invalid: errors.email
                   })}
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" style={{ fontFamily: "Share Tech Mono, monospace" }}>Email</label>
                 <span className="red-text">{errors.email}</span>
               </div>
               <div className="input-field col s12">
@@ -140,7 +140,7 @@ class Register extends Component {
                     invalid: errors.password
                   })}
                 />
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" style={{ fontFamily: "Share Tech Mono, monospace" }}>Password</label>
                 <span className="red-text">{errors.password}</span>
               </div>
               <div className="input-field col s12">
@@ -154,7 +154,7 @@ class Register extends Component {
                     invalid: errors.password2
                   })}
                 />
-                <label htmlFor="password2">Confirm Password</label>
+                <label htmlFor="password2" style={{ fontFamily: "Share Tech Mono, monospace" }}>Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
@@ -163,7 +163,8 @@ class Register extends Component {
                     width: "150px",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
-                    marginTop: "1rem"
+                    marginTop: "1rem",
+                    fontFamily: "Share Tech Mono, monospace" 
                   }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
