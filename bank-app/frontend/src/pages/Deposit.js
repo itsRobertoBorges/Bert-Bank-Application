@@ -37,31 +37,33 @@ class Deposit extends Component {
 
     return (
       <div className="deposit-container">
-        <h2 className="deposit-title">Deposit</h2>
+        <h2 className="deposit-title" style={{ fontFamily: "Share Tech Mono, monospace", color:"green"}}>Deposit</h2>
         <Link
             to="/dashboard"
             style={{
               fontFamily: "monospace",
+              color: "yellowgreen"
             }}
             className="col s5 brand-logo center black-text"
           >
-            <i className="material-icons">arrow_back</i>
+            <i className="material-icons green-text" >arrow_back</i>
           </Link>
         <div className="deposit-form-container">
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="amount">Amount:</label>
+              <label htmlFor="amount" style={{ fontFamily: "Share Tech Mono, monospace", color:"green"}}>Amount:</label>
               <input
-                type="number"
-                className="form-control"
-                id="amount"
-                name="amount"
-                value={amount}
-                onChange={this.handleChange}
-                required
-              />
+                  type="number"
+                  className="form-control"
+                  id="amount"
+                  name="amount"
+                  value={amount}
+                  onChange={this.handleChange}
+                  required
+                  style={{ color: "green", backgroundColor: "black" }}
+                />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" style={{color: "green", backgroundColor: "black", fontFamily: "Share Tech Mono, monospace"}}>
               Deposit
             </button>
           </form>

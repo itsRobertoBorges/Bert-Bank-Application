@@ -9,14 +9,22 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align">
             <img
-              src="./corp-logo.png"
+              src="./green_coin.png"
               alt="corp art"
               style={{ maxWidth: "300px", maxHeight: "500px" }}
             />
-            <h4 style={{ fontFamily: "Share Tech Mono, monospace" }}>
+            <h4
+              style={{
+                fontFamily: "Share Tech Mono, monospace",
+                color: "greenyellow"
+              }}
+            >
               <b>Welcome!</b> This is a simple Banking Application built using the MERN stack from scratch
             </h4>
-            <p className="flow-text grey-text text-darken-1" style={{ fontFamily: "Share Tech Mono, monospace" }}>
+            <p
+              className="flow-text grey-text text-darken-1"
+              style={{ fontFamily: "Share Tech Mono, monospace" }}
+            >
               This is a (minimal) full-stack app with user authentication via passport and JWTs
             </p>
             <br />
@@ -27,9 +35,11 @@ class Landing extends Component {
                   width: "140px",
                   borderRadius: "3px",
                   letterSpacing: "1.5px",
-                  fontFamily: "Share Tech Mono, monospace"
+                  fontFamily: "Share Tech Mono, monospace",
+                  color: "black",
+                  backgroundColor: "green"
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn-large waves-effect waves-light hoverable"
               >
                 Register
               </Link>
@@ -43,7 +53,7 @@ class Landing extends Component {
                   letterSpacing: "1.5px",
                   fontFamily: "Share Tech Mono, monospace"
                 }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                className="btn btn-large btn-flat waves-effect black green-text"
               >
                 Log In
               </Link>

@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url(corp-background.jpg);
+    background-image: url(corp-background-green.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -10,3 +10,8 @@
     z-index: -1;
   }
   
+  .green-button {
+    background-color: green !important;
+  }
+
+  body { background-color: black; }

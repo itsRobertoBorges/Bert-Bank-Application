@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import { Link } from "react-router-dom"; // Import the Link component from React Router
+import { Link } from "react-router-dom";
 
 class DashNavBar extends Component {
-  onLogoutClick = e => {
+  onLogoutClick = (e) => {
     e.preventDefault();
     this.props.logoutUser();
   };
@@ -19,23 +19,37 @@ class DashNavBar extends Component {
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
-            <nav className="dash-nav">
+            <nav
+              className="dash-nav"
+              style={{
+                backgroundColor: "black",
+                boxShadow: "0 10px 10px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <div className="background-image"></div>
               <Link to="/deposit" className="dash-nav-link">
-                <h1 style={{ color: "black" }}><strong>Deposit</strong></h1>
+                <h1 style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>
+                  <strong>Deposit</strong>
+                </h1>
               </Link>
               <Link to="/withdrawl" className="dash-nav-link">
-                <h1 style={{ color: "black" }}><strong>Withdrawal</strong></h1>
+                <h1 style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>
+                  <strong>Withdrawal</strong>
+                </h1>
               </Link>
               <Link to="/viewaccount" className="dash-nav-link">
-                <h1 style={{ color: "black" }}><strong>View Account</strong></h1>
+                <h1 style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>
+                  <strong>View Account</strong>
+                </h1>
               </Link>
             </nav>
             <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-              <br></br>
-              <b>Welcome to BERT Banking</b>
+              <b style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>Hey there,</b>{" "}
+              <span style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>{user.name.split(" ")[0]}</span>
+              <br />
+              <b style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>Welcome to BERT Banking</b>
               <p className="flow-text grey-text text-darken-1">
-                <strong>{formattedDate}</strong>
+                <strong style={{ fontFamily: "Share Tech Mono, monospace", color: "yellowgreen" }}>{formattedDate}</strong>
               </p>
             </h4>
             <button
@@ -43,10 +57,11 @@ class DashNavBar extends Component {
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "1rem"
+                marginTop: "1rem",
+                fontFamily: "Share Tech Mono, monospace", color: "yellowgreen"
               }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-large waves-effect waves-light hoverable black yellow green-text"
             >
               Logout
             </button>
@@ -59,14 +74,11 @@ class DashNavBar extends Component {
 
 DashNavBar.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
+const mapStateToProps = (state) => ({
+  auth: state.auth,
 });
 
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(DashNavBar);
+export default connect(mapStateToProps, { logoutUser })(DashNavBar);

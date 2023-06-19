@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 import M from "materialize-css/dist/js/materialize.min.js";
+import "../../App.css";
+
 
 class Register extends Component {
   constructor(props) {
@@ -17,38 +19,31 @@ class Register extends Component {
       errors: {}
     };
 
-    // Create ref objects
     this.nameInput = React.createRef();
     this.nameLabel = React.createRef();
   }
 
   componentDidMount() {
-    // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
 
-    // Initialize floating labels
     M.updateTextFields();
 
-    // Add event listeners to input elements for focusing and blurring
     this.nameInput.current.addEventListener("focus", this.handleInputFocus);
     this.nameInput.current.addEventListener("blur", this.handleInputBlur);
   }
 
   componentWillUnmount() {
-    // Remove event listeners when component unmounts
     this.nameInput.current.removeEventListener("focus", this.handleInputFocus);
     this.nameInput.current.removeEventListener("blur", this.handleInputBlur);
   }
 
   handleInputFocus = (e) => {
-    // Add active class to label
     this.nameLabel.current.classList.add("active");
   };
 
   handleInputBlur = (e) => {
-    // Remove active class from label if input value is empty
     if (e.target.value === "") {
       this.nameLabel.current.classList.remove("active");
     }
@@ -86,19 +81,19 @@ class Register extends Component {
       <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to home
+            <Link to="/" className="btn-flat waves-effect green-text">
+              <i className="material-icons left green-text">keyboard_backspace</i> Back to home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4 style={{ fontFamily: "Share Tech Mono, monospace" }}>
+              <h4 style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1" style={{ fontFamily: "Share Tech Mono, monospace" }}>
-                Already have an account? <Link to="/login">Log in</Link>
+              <p className="grey-text text-darken-1 green-text">
+                Already have an account? <Link to="/login" className="green-text">Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12" style={{ fontFamily: "Share Tech Mono, monospace" }}>
+              <div className="input-field col s12">
                 <input
                   ref={this.nameInput}
                   onChange={this.onChange}
@@ -109,8 +104,9 @@ class Register extends Component {
                   className={classnames("", {
                     invalid: errors.name
                   })}
+                  style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="name" ref={this.nameLabel}>
+                <label htmlFor="name" ref={this.nameLabel} className="green-text">
                   Name
                 </label>
                 <span className="red-text">{errors.name}</span>
@@ -125,8 +121,9 @@ class Register extends Component {
                   className={classnames("", {
                     invalid: errors.email
                   })}
+                  style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="email" style={{ fontFamily: "Share Tech Mono, monospace" }}>Email</label>
+                <label htmlFor="email" className="green-text">Email</label>
                 <span className="red-text">{errors.email}</span>
               </div>
               <div className="input-field col s12">
@@ -139,8 +136,9 @@ class Register extends Component {
                   className={classnames("", {
                     invalid: errors.password
                   })}
+                  style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="password" style={{ fontFamily: "Share Tech Mono, monospace" }}>Password</label>
+                <label htmlFor="password" className="green-text" >Password</label>
                 <span className="red-text">{errors.password}</span>
               </div>
               <div className="input-field col s12">
@@ -153,8 +151,9 @@ class Register extends Component {
                   className={classnames("", {
                     invalid: errors.password2
                   })}
+                  style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="password2" style={{ fontFamily: "Share Tech Mono, monospace" }}>Confirm Password</label>
+                <label htmlFor="password2" className="green-text">Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
@@ -164,10 +163,12 @@ class Register extends Component {
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem",
-                    fontFamily: "Share Tech Mono, monospace" 
+                    fontFamily: "Share Tech Mono, monospace" ,
+                    color: "green", 
+                    backgroundColor: "black"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable black green-text"
                 >
                   Sign up
                 </button>
