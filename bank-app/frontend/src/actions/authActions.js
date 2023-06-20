@@ -63,3 +63,19 @@ export const logoutUser = () => dispatch => {
   // Set current user to empty object {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
+
+// Deposit and Withdrawl Amount
+
+export const depositAmount = (amount) => {
+  return {
+    type: "DEPOSIT_AMOUNT",
+    payload: amount,
+  };
+};
+
+export const withdrawlAmount = (amount) => {
+  return {
+    type: "WITHDRAWL_AMOUNT",
+    payload: amount,
+  };
+};

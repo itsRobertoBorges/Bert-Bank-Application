@@ -17,17 +17,17 @@ class ViewAccount extends Component {
 
     return (
       <div className="view-account-container">
-        <h2 className="view-account-title">Account Summary</h2>
+        <h2 className="view-account-title"  style={{ fontFamily: "Share Tech Mono, monospace", color: "green"}}>Account Summary</h2>
         <div className="view-account-details">
           <h3>
-            <strong>Welcome, {user.name.split(" ")[0]}</strong>
+            <strong style={{ fontFamily: "Share Tech Mono, monospace", color: "green"}}>Welcome, {user.name.split(" ")[0]}</strong>
           </h3>
           <p className="total-saved-label">
-            <span className="label">Total Saved:</span>
-            <span className="value">${depositAmount}</span>
+            <span className="label" style={{ fontFamily: "Share Tech Mono, monospace", color: "green"}}>Total Saved:</span>
+            <span className="value" style={{ fontSize:"50px", fontFamily: "Share Tech Mono, monospace", color: "green"}}>${depositAmount}</span>
           </p>
         </div>
-        <button className="btn-logout" onClick={this.onLogoutClick}>
+        <button className="btn-logout black" onClick={this.onLogoutClick} style={{ fontFamily: "Share Tech Mono, monospace", color: "greenyellow"}}>
           Logout
         </button>
         <Link
@@ -38,7 +38,7 @@ class ViewAccount extends Component {
             }}
             className="col s5 brand-logo center black-text"
           >
-            <i className="material-icons">arrow_back</i>
+            <i className="material-icons black green-text">arrow_back</i>
         </Link>
       </div>
     );
@@ -54,6 +54,7 @@ ViewAccount.propTypes = {
 const mapStateToProps = (state) => ({
   auth: state.auth,
   depositAmount: state.deposit.amount,
+  withdrawlAmount: state.withdrawlAmount
 });
 
 export default connect(mapStateToProps, { logoutUser })(ViewAccount);

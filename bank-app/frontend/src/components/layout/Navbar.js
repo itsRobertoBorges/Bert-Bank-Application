@@ -11,9 +11,9 @@ class Navbar extends Component {
               to="/dashboard"
               style={{
                 fontFamily: "monospace",
-                color: "white" 
+                color: "green" 
               }}
-              className="col s5 brand-logo center light-green-text"
+              className="col s5 brand-logo center"
             >
               <i className="material-icons">business</i>
               BERT BANKING

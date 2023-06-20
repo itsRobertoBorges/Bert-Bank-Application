@@ -49,6 +49,16 @@
     align-items: center;
     justify-content: center;
     height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    border: 1px solid #00ff37;
+    border-radius: 4px;
+    box-shadow: 0 20px 400px rgba(9, 228, 9, 0.5);
+    padding: 20px;
+    margin: 20px;
   }
   
   .welcome-text {
@@ -85,9 +95,9 @@
     align-items: center;
     justify-content: center;
     height: 50vh;
-    border: 1px solid #ddd;
+    border: 1px solid #00ff37;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 400px rgba(9, 228, 9, 0.5);
     padding: 20px;
     margin: 20px;
   }
