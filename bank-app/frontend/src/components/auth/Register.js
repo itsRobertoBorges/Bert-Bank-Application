@@ -88,8 +88,8 @@ class Register extends Component {
               <h4 style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1 green-text">
-                Already have an account? <Link to="/login" className="green-text">Log in</Link>
+              <p className="grey-text text-darken-1 green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>
+                Already have an account? <Link to="/login" className="green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -106,7 +106,7 @@ class Register extends Component {
                   })}
                   style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="name" ref={this.nameLabel} className="green-text">
+                <label htmlFor="name" ref={this.nameLabel} className="green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>
                   Name
                 </label>
                 <span className="red-text">{errors.name}</span>
@@ -123,7 +123,7 @@ class Register extends Component {
                   })}
                   style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="email" className="green-text">Email</label>
+                <label htmlFor="email" className="green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>Email</label>
                 <span className="red-text">{errors.email}</span>
               </div>
               <div className="input-field col s12">
@@ -136,9 +136,9 @@ class Register extends Component {
                   className={classnames("", {
                     invalid: errors.password
                   })}
-                  style={{ color: "green", backgroundColor: "black"}}
+                  style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}
                 />
-                <label htmlFor="password" className="green-text" >Password</label>
+                <label htmlFor="password" className="green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>Password</label>
                 <span className="red-text">{errors.password}</span>
               </div>
               <div className="input-field col s12">
@@ -153,7 +153,7 @@ class Register extends Component {
                   })}
                   style={{ color: "green", backgroundColor: "black"}}
                 />
-                <label htmlFor="password2" className="green-text">Confirm Password</label>
+                <label htmlFor="password2" className="green-text" style={{ fontFamily: "Share Tech Mono, monospace", color: "green" }}>Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>

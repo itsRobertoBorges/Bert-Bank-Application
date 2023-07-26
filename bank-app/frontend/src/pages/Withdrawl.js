@@ -27,8 +27,8 @@ class Withdrawal extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { depositAmount } = this.state;
-    this.props.withdrawlAmount(depositAmount);
+    const { amount } = this.state;
+    this.props.withdrawlAmount(amount);
     this.setState({ amount: "", accountType: "" });
   };
 
